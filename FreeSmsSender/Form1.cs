@@ -12,7 +12,8 @@ using MaterialSkin;
 namespace FreeSmsSender
 {
     public partial class Form1 : MaterialSkin.Controls.MaterialForm
-    { 
+    {
+    // add shadow to corners
         protected override CreateParams CreateParams
         {
             get
