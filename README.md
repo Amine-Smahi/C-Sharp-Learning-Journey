@@ -1,5 +1,5 @@
 # MaterialDesign-FreeSmSender
-A free sms sender made with c sharp ( c# )  and .net winform that use ipipi information to send free sms ( text) to anyone in the world , with a buetiful material design components !
+A free sms sender made with c sharp ( c# ) and .net winform that use ipipi information to send free sms ( text) to anyone in the world , with a beautiful material design components !
 
 ### Who is ipipi
 Provider of text messaging solutions that enable businesses and individuals worldwide to communicate using SMS
