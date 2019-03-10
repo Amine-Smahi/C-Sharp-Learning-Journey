@@ -1,0 +1,98 @@
+﻿<Page x:Class="FacturationMiniProjet.Client.ClientPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:FacturationMiniProjet.Client"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d"
+      Background="#E5E8F1"
+      d:DesignHeight="810" d:DesignWidth="1200"
+      Title="ArticlePage">
+
+  <Grid Margin="30">
+
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="121*" />
+      <ColumnDefinition Width="36*" />
+    </Grid.ColumnDefinitions>
+    <Grid Grid.Column="0">
+      <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+        <StackPanel Orientation="Horizontal" Margin="0 0 0 20" VerticalAlignment="Center">
+          <TextBox x:Name="inputRecherche" Width="200" FontSize="18" Background="#FFFFFF" />
+          <Label Width="40" />
+          <Button x:Name="Rechercher" Height="45" Width="170" Click="Rechercher_Click" Background="#293239"
+                  BorderBrush="#FFFFFF">
+            <TextBlock Text="Rechercher" Foreground="#fff" FontSize="18" />
+          </Button>
+        </StackPanel>
+        <Border BorderThickness="1">
+          <Border.Effect>
+            <DropShadowEffect BlurRadius="20" Opacity="0.2" />
+          </Border.Effect>
+          <DataGrid x:Name="dataGridView3" BorderThickness="0"
+                    Background="#FFFFFF" Foreground="#222" FontSize="18" Height="620" BorderBrush="Transparent"
+                    ItemsSource="{Binding}" AlternatingRowBackground="#F3F3F3" AutoGenerateColumns="False"
+                    CanUserAddRows="False" SelectionChanged="dataGridView3_SelectionChanged">
+            <DataGrid.Resources>
+              <Style BasedOn="{StaticResource {x:Type DataGridColumnHeader}}"
+                     TargetType="{x:Type DataGridColumnHeader}">
+                <Setter Property="Foreground" Value="#222222" />
+              </Style>
+            </DataGrid.Resources>
+            <DataGrid.Columns>
+              <DataGridTextColumn Header="Numero Client" Width="*" Binding="{Binding N_Client}" />
+              <DataGridTextColumn Header="Nom" Width="*" Binding="{Binding Nom}" />
+              <DataGridTextColumn Header="Adresse" Width="*" Binding="{Binding Adresse }" />
+              <DataGridTextColumn Header="RC" Width="*" Binding="{Binding RC}" />
+              <DataGridTextColumn Header="Mat Fiscal" Width="*" Binding="{Binding Mat_Fiscal}" />
+            </DataGrid.Columns>
+          </DataGrid>
+        </Border>
+      </StackPanel>
+    </Grid>
+    <Grid Grid.Column="1">
+      <StackPanel Orientation="Vertical" Margin="5 10 0 0" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <StackPanel Orientation="Vertical" Margin="0 0 0 15">
+          <Label Content="Nom" FontSize="20" HorizontalAlignment="Center" Foreground="#222222" />
+          <TextBox x:Name="Nom" Width="250" FontSize="18" VerticalAlignment="Center" Foreground="#222222"
+                   Background="#FFFFFF" />
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Margin="0 0 0 15">
+          <Label Content="Adresse" FontSize="20" HorizontalAlignment="Center" Foreground="#222222" />
+          <TextBox x:Name="Adresse" Width="250" FontSize="18" VerticalAlignment="Center" Foreground="#222222"
+                   Background="#FFFFFF" />
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Margin="0 0 0 15">
+          <Label Content="RC" FontSize="20" HorizontalAlignment="Center" Foreground="#222222" />
+          <TextBox x:Name="RC" Width="250" FontSize="18" VerticalAlignment="Center" Foreground="#222222"
+                   Background="#FFFFFF" />
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Margin="0 0 0 15">
+          <Label Content="Mat Fiscal" FontSize="20" HorizontalAlignment="Center" Foreground="#222222" />
+          <TextBox x:Name="Mat_Fiscals" Width="250" FontSize="18" VerticalAlignment="Center" Foreground="#222222"
+                   Background="#FFFFFF" />
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0 20 0 0">
+          <Button x:Name="Ajouter" Margin="0 0 0 20" Click="Ajouter_Click" Height="45" Width="250" Background="#293239"
+                  BorderBrush="#FFFFFF">
+            <TextBlock Text="Ajouter" Foreground="#fff" FontSize="18" />
+          </Button>
+          <Button x:Name="Modifier" Margin="0 0 0 20" Click="Modifier_Click" Height="45" Width="250"
+                  Background="#293239" BorderBrush="#FFFFFF">
+            <TextBlock Text="Modifier" Foreground="#fff" FontSize="18" />
+          </Button>
+          <Button x:Name="Supprimer" Height="45" Margin="0 0 0 20" Width="250" Click="Supprimer_Click"
+                  Background="#293239" BorderBrush="#FFFFFF">
+            <TextBlock Text="Supprimer" Foreground="#fff" FontSize="18" />
+          </Button>
+          <Button x:Name="Facture" Height="45" Width="250" Click="Facture_Click" Background="#293239"
+                  BorderBrush="#FFFFFF">
+            <TextBlock Text="Factures" Foreground="#fff" FontSize="18" />
+          </Button>
+        </StackPanel>
+      </StackPanel>
+    </Grid>
+  </Grid>
+</Page>

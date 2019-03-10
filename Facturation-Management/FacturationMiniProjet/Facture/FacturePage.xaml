@@ -1,0 +1,126 @@
+﻿<Page x:Class="FacturationMiniProjet.Facture.FacturePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:FacturationMiniProjet.Facture"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d"
+      Background="#E5E8F1"
+      d:DesignHeight="820" d:DesignWidth="1200"
+      Title="ArticlePage">
+
+
+  <Grid Margin="30">
+
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="121*" />
+      <ColumnDefinition Width="36*" />
+    </Grid.ColumnDefinitions>
+    <Grid Grid.Column="0">
+      <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+        <StackPanel Orientation="Horizontal" Margin="0 0 0 20" VerticalAlignment="Center">
+          <Label Content="montant factures supérieur a :    " VerticalAlignment="Center" FontSize="18"
+                 Foreground="#222222" />
+          <TextBox x:Name="inputRecherche" Width="200" Height="35" FontSize="18" Background="#FFFFFF" />
+          <Label Content="  DA" FontSize="18" VerticalAlignment="Center" Foreground="#222222" />
+          <Label Width="40" />
+          <Button x:Name="Rechercher" Height="40" Width="170" Click="Rechercher_Click" Background="#293239"
+                  BorderBrush="#FFFFFF">
+            <TextBlock Text="Rechercher" Foreground="#fff" FontSize="17" />
+          </Button>
+        </StackPanel>
+        <Border BorderThickness="1">
+          <Border.Effect>
+            <DropShadowEffect BlurRadius="20" Opacity="0.2" />
+          </Border.Effect>
+          <DataGrid x:Name="dataGridView3" BorderThickness="0" BorderBrush="#E6EAED"
+                    Background="#FFFFFF" Foreground="#222" FontSize="15" Height="550"
+                    ItemsSource="{Binding}" AlternatingRowBackground="#F3F3F3" IsReadOnly="True"
+                    AutoGenerateColumns="False" CanUserAddRows="False"
+                    SelectionChanged="dataGridView3_SelectionChanged">
+            <DataGrid.Resources>
+              <Style BasedOn="{StaticResource {x:Type DataGridColumnHeader}}"
+                     TargetType="{x:Type DataGridColumnHeader}">
+                <Setter Property="Foreground" Value="#222222" />
+              </Style>
+            </DataGrid.Resources>
+            <DataGrid.Columns>
+              <DataGridTextColumn Header="Num Facture" Width="*" Binding="{Binding N_Fact}" />
+              <DataGridTextColumn Header="Nom Client" Width="*" Binding="{Binding Nom}" />
+              <DataGridTextColumn Header="Date Facture" Width="*" Binding="{Binding date_facture }" />
+              <DataGridTextColumn Header="Num Article" Width="*" Binding="{Binding N_Article}" />
+              <DataGridTextColumn Header="Libelle" Width="*" Binding="{Binding Libelle}" />
+              <DataGridTextColumn Header="PrixUnit" Width="*" Binding="{Binding Prix_unit}" />
+              <DataGridTextColumn Header="TVA" Width="*" Binding="{Binding TVA}" />
+              <DataGridTextColumn Header="HT" Width="*" Binding="{Binding HT}" />
+              <DataGridTextColumn Header="Qte Vente" Width="*" Binding="{Binding Qte_vente}" />
+            </DataGrid.Columns>
+          </DataGrid>
+        </Border>
+        <StackPanel Orientation="Horizontal" Margin="0 20 0 0" HorizontalAlignment="Left">
+          <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 0 40 20">
+            <Label Content="TTC global : " FontSize="20" HorizontalAlignment="Right" Foreground="#222222" />
+            <TextBox x:Name="TTC_global" Width="200" IsEnabled="False" FontSize="18" VerticalAlignment="Center"
+                     Foreground="#222222" Background="#FFFFFF" />
+          </StackPanel>
+          <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 0 0 15">
+            <Label Content="TVA : " FontSize="20" HorizontalAlignment="Center" Foreground="#222222" />
+            <TextBox x:Name="TVA" Text="19" HorizontalContentAlignment="Center" Width="250" FontSize="18"
+                     VerticalAlignment="Center" Foreground="#222222" Background="#FFFFFF" />
+          </StackPanel>
+        </StackPanel>
+      </StackPanel>
+    </Grid>
+    <Grid Grid.Column="1">
+      <StackPanel Orientation="Vertical" Margin="10 0 0 0" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0 0 0 15">
+          <Label Content="Nom Client : " FontSize="20" HorizontalAlignment="Center" HorizontalContentAlignment="Center"
+                 Foreground="#222222" />
+          <ComboBox x:Name="Nom_client" Width="250" FontSize="18" HorizontalContentAlignment="Center"
+                    VerticalAlignment="Center" Foreground="#222" Background="#FFFFFF" />
+        </StackPanel>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0 0 0 15">
+          <Label Content="date facture : " FontSize="20" HorizontalAlignment="Center" Foreground="#222222" />
+          <DatePicker x:Name="date_facture" Width="250" FontSize="18" VerticalAlignment="Center"
+                      HorizontalContentAlignment="Center" Foreground="#222222" Background="#FFFFFF" />
+        </StackPanel>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0 0 0 15">
+          <Label Content="Libelle : " FontSize="20" HorizontalAlignment="Center" Foreground="#222222" />
+          <ComboBox x:Name="libelle" SelectionChanged="libelle_SelectionChanged" HorizontalContentAlignment="Center"
+                    Width="250" FontSize="18" VerticalAlignment="Center" Foreground="#222222" Background="#FFFFFF" />
+        </StackPanel>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0 0 0 15">
+          <Label Content="Prix Unit : " FontSize="20" HorizontalAlignment="Center" Foreground="#222222" />
+          <TextBox x:Name="prixUnit" HorizontalContentAlignment="Center" Width="250" FontSize="18"
+                   VerticalAlignment="Center" Foreground="#222222" Background="#FFFFFF" />
+        </StackPanel>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0 0 0 15">
+          <Label Content="Qte vente : " FontSize="20" HorizontalAlignment="Center" Foreground="#222222" />
+          <TextBox x:Name="QteVente" HorizontalContentAlignment="Center" Width="250" FontSize="18"
+                   VerticalAlignment="Center" Foreground="#222222" Background="#FFFFFF" />
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Right" Margin="0 7 0 0">
+          <Button x:Name="Ajouter" Margin="0 0 0 20" Click="Ajouter_Click" Height="45" Width="250" Background="#293239"
+                  BorderBrush="#FFFFFF">
+            <TextBlock Text="Ajouter" Foreground="#fff" FontSize="18" />
+          </Button>
+          <Button x:Name="Modifier" Margin="0 0 0 20" Click="Modifier_Click" Height="45" Width="250"
+                  Background="#293239" BorderBrush="#FFFFFF">
+            <TextBlock Text="Modifier" Foreground="#fff" FontSize="18" />
+          </Button>
+          <Button x:Name="Supprimer" Height="45" Width="250" Margin="0 0 0 20" Click="Supprimer_Click"
+                  Background="#293239"
+                  BorderBrush="#FFFFFF">
+            <TextBlock Text="Supprimer" Foreground="#fff" FontSize="18" />
+          </Button>
+          <Button x:Name="Advanced" Height="45" Width="250" Click="Advanced_Click" Background="#293239"
+                  BorderBrush="#FFFFFF">
+            <TextBlock Text="Advanced" Foreground="#fff" FontSize="18" />
+          </Button>
+        </StackPanel>
+      </StackPanel>
+    </Grid>
+  </Grid>
+</Page>

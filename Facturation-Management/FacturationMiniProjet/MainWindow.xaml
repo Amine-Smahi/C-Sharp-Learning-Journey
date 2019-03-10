@@ -1,0 +1,61 @@
+﻿<Window x:Class="FacturationMiniProjet.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FacturationMiniProjet"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        BorderThickness="0"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        BorderBrush="Transparent"
+        Height="800" Width="1470">
+  <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="150*" />
+      <ColumnDefinition Width="1107*" />
+    </Grid.ColumnDefinitions>
+    <Grid Grid.Row="0" Background="#293239" Grid.Column="0">
+      <materialDesign:PackIcon Kind="MoneyUsd" Foreground="#fff" Width="65" Height="65" VerticalAlignment="Center"
+                               HorizontalAlignment="Center" Margin="0 0 0 580" />
+      <TextBlock Text="MyFacture" FontWeight="Bold" Foreground="#fff" HorizontalAlignment="Center" FontSize="26"
+                 VerticalAlignment="Center" Margin="0 0 0 500" />
+      <TextBlock Text="La facture na jamai etait plus simple" Foreground="#fff" HorizontalAlignment="Center"
+                 FontSize="9" VerticalAlignment="Center" Margin="0 0 0 450" />
+      <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+        <Button x:Name="Article" Foreground="#fff" Click="Article_Click" HorizontalContentAlignment="Left"
+                Focusable="False" Margin="0 20 0 0" Height="50" Width="200" Background="Transparent"
+                BorderBrush="Transparent" BorderThickness="0">
+          <StackPanel Orientation="Horizontal">
+            <materialDesign:PackIcon Kind="Ticket" Width="25" Height="25" VerticalAlignment="Center"
+                                     HorizontalAlignment="Center" Margin="2 0 10 0" />
+            <TextBlock Text="Articles" FontSize="22" VerticalAlignment="Center" />
+          </StackPanel>
+
+        </Button>
+        <Button x:Name="Client" Foreground="#fff" Click="Client_Click" HorizontalContentAlignment="Left"
+                Focusable="False" Margin="0 20 0 0" Height="50" Width="200" Background="Transparent"
+                BorderBrush="Transparent" BorderThickness="0">
+          <StackPanel Orientation="Horizontal">
+            <materialDesign:PackIcon Kind="AccountMultiple" Width="25" Height="25" VerticalAlignment="Center"
+                                     HorizontalAlignment="Center" Margin="2 0 10 0" />
+            <TextBlock Text="Client" FontSize="22" VerticalAlignment="Center" />
+          </StackPanel>
+        </Button>
+        <Button x:Name="Facture" Foreground="#fff" Click="Facture_Click" Focusable="False"
+                HorizontalContentAlignment="Left" Margin="0 20 0 0" Height="50" Width="200" Background="Transparent"
+                BorderBrush="Transparent" BorderThickness="0">
+          <StackPanel Orientation="Horizontal">
+            <materialDesign:PackIcon Kind="CurrencyEur" Width="25" Height="25" VerticalAlignment="Center"
+                                     HorizontalAlignment="Center" Margin="2 0 10 0" />
+            <TextBlock Text="Factures" FontSize="22" VerticalAlignment="Center" />
+          </StackPanel>
+        </Button>
+      </StackPanel>
+    </Grid>
+    <Grid Background="#E5E8F1" Grid.Row="0" Grid.Column="1">
+      <Frame x:Name="Frame" />
+    </Grid>
+  </Grid>
+</Window>
