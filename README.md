@@ -7,7 +7,6 @@
 * What is .NET Core
 * What is C#
 * What this repository contains
-* How to run the projects
 * Resources & tutorials
 * Credits
 
