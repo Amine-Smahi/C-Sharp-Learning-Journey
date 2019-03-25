@@ -74,10 +74,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Facture\FactureAdvPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="Facture\FacturePage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -97,9 +93,6 @@
       <DependentUpon>ClientPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controllers\HelperMySQL.cs" />
-    <Compile Include="Facture\FactureAdvPage.xaml.cs">
-      <DependentUpon>FactureAdvPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Facture\FacturePage.xaml.cs">
       <DependentUpon>FacturePage.xaml</DependentUpon>
     </Compile>
@@ -109,6 +102,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\SearchElement.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

@@ -19,9 +19,9 @@
     <Grid Grid.Column="0">
       <StackPanel Orientation="Vertical" VerticalAlignment="Center">
         <StackPanel Orientation="Horizontal" Margin="0 0 0 20" VerticalAlignment="Center">
-          <TextBox x:Name="inputRecherche" Width="200" FontSize="18" Background="#FFFFFF" />
+          <TextBox x:Name="inputRecherche" Width="200" Height="40" FontSize="18" Background="#FFFFFF" />
           <Label Width="40" />
-          <Button x:Name="Rechercher" Height="45" Width="170" Click="Rechercher_Click" Background="#293239"
+          <Button x:Name="Rechercher" Height="40" Width="170" Click="Rechercher_Click" Background="#293239"
                   BorderBrush="#FFFFFF">
             <TextBlock Text="Rechercher" Foreground="#fff" FontSize="18" />
           </Button>
@@ -31,7 +31,7 @@
             <DropShadowEffect BlurRadius="20" Opacity="0.2" />
           </Border.Effect>
           <DataGrid x:Name="dataGridView3" BorderThickness="0"
-                    Background="#FFFFFF" Foreground="#222" FontSize="18" Height="620" BorderBrush="Transparent"
+                    Background="#FFFFFF" Foreground="#222" FontSize="16" Height="620" BorderBrush="Transparent"
                     ItemsSource="{Binding}" AlternatingRowBackground="#F3F3F3" AutoGenerateColumns="False"
                     CanUserAddRows="False" SelectionChanged="dataGridView3_SelectionChanged">
             <DataGrid.Resources>

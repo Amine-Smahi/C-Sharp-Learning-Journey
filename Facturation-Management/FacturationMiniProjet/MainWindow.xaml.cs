@@ -62,6 +62,8 @@ namespace FacturationMiniProjet
              ON DELETE CASCADE
           ) ENGINE=InnoDB DEFAULT CHARSET=utf8;"
       );*/
+      Frame.NavigationUIVisibility = NavigationUIVisibility.Hidden;
+      Frame.Navigate(new ArticlePage());
     }
 
     private void Facture_Click(object sender, RoutedEventArgs e)
