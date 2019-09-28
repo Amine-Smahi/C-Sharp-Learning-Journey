@@ -33,6 +33,7 @@ While learning i did very simple projects to test what i learned
 * [Udemy](https://www.udemy.com/courses/search/?ref=home&q=C%23)
 * [Fundamentals of Computer Programming with C#](http://www.introprogramming.info/)
 * [msdn channel ](https://mva.microsoft.com/en-us/training-courses/c-fundamentals-for-absolute-beginners-16169)
+* [Youtube](https://www.youtube.com/watch?v=GhQdlIFylQ8)
 
 ## Credit 
 I want to say thank you for all my friends that helped and guided me all the way.
