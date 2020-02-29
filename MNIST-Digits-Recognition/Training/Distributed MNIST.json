@@ -1,0 +1,10 @@
+{
+  "StartupBashScript": null,
+  "EnableBashScript": false,
+  "StartupProgram": "mpiexec -n 4 python Train_MNIST.py --input_dir ./ --output_dir ./ --epochs 3",
+  "Environment": "",
+  "EnableConcurrency": false,
+  "CommonParameter": null,
+  "ExtraParameter": null,
+  "HyperParameters": []
+}

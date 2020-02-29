@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2006
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Training", "Training\Training.pyproj", "{A035E9FD-A72D-44E3-B9FB-2CE5C31D9A48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Digitz", "Digitz\Digitz.csproj", "{08A68374-6495-4694-BB29-49C7FA32330B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A035E9FD-A72D-44E3-B9FB-2CE5C31D9A48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A035E9FD-A72D-44E3-B9FB-2CE5C31D9A48}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A035E9FD-A72D-44E3-B9FB-2CE5C31D9A48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A035E9FD-A72D-44E3-B9FB-2CE5C31D9A48}.Release|x64.ActiveCfg = Release|Any CPU
+		{08A68374-6495-4694-BB29-49C7FA32330B}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{08A68374-6495-4694-BB29-49C7FA32330B}.Debug|x64.ActiveCfg = Debug|x64
+		{08A68374-6495-4694-BB29-49C7FA32330B}.Debug|x64.Build.0 = Debug|x64
+		{08A68374-6495-4694-BB29-49C7FA32330B}.Release|Any CPU.ActiveCfg = Release|x64
+		{08A68374-6495-4694-BB29-49C7FA32330B}.Release|x64.ActiveCfg = Release|x64
+		{08A68374-6495-4694-BB29-49C7FA32330B}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2D0DD590-A948-4DD1-81A6-8B12A7A165CC}
+	EndGlobalSection
+EndGlobal
