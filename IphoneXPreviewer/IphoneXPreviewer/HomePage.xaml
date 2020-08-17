@@ -1,0 +1,24 @@
+﻿<Window x:Class="WpfApp5.HomePage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp5"
+        mc:Ignorable="d"
+        Background="Transparent"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        Title="HomePage" Height="650" Width="330">
+    <Grid>
+        <Image Source="assets/iphonex-white.png" Stretch="Fill" Grid.Column="0" Grid.Row="0"/>
+        <Grid Background="#fff" Margin="40">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                <Label FontSize="30" FontWeight="Bold" Content="IphoneX" HorizontalAlignment="Center" />
+                <Label FontSize="16" FontWeight="Bold" Content="Previewer" HorizontalAlignment="Center" Margin="0,-10,0,50" />
+                <Label Content="Enter your client url" Foreground="#1E1E1E" HorizontalContentAlignment="Center"></Label>
+                <TextBox x:Name="ClientUrl" Width="150"  Margin="0,10,0,0" Height="30" VerticalContentAlignment="Center" ></TextBox>
+                <Button Background="#000" Content="Go" HorizontalContentAlignment="Center" Foreground="#fff" Margin="0,10,0,0" Click="Button_Click" Height="35" />
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
